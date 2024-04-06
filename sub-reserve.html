@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Submit Reservation</title>
+        <style>
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input[type=number] {
+                -moz-appearance: textfield;
+            }
+            .box{
+                width: 22.5%;
+                padding: 60px;
+                border-radius: 15px;
+                position: absolute;
+                left: 38%;
+                top: 5%;
+            }
+            .pricebox{
+                width: 30.5%;
+                padding: 60px;
+                border-radius: 15px;
+                box-shadow: 0 2px 3px black;
+                position: absolute;
+                left: 29.5%;
+                top: 35%; 
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <a href="page1.html">
+                <img src="images/trivago.png" style="float: left; height: 88px; width: 200px;">
+            </a>
+        </div>
+        <div class="box" style="height: 150px; width: 190px; right: 1%;">
+            <img style="height: 100%; width: 100%;" class="bal7a" src="images/four-seasons.png">
+        </div>
+        <div class="pricebox">
+            <center>
+                <h4>Base price: 150$</h4>
+                <h4>Discount: 0$</h4>
+                <hr>
+                <h4>Total Price: 150$</h4>
+            </center>
+            <br><br>
+            <form action="loading.html">
+                <div style="text-align: left;">
+                Transaction Options:
+                <br>
+                <input type="radio" name="transc">
+                <img style="width: 55px;
+                height: 35px;" src="images/Mastercard-Logo.wine.png">
+                </div>
+                <div>
+                <input type="radio" name="transc">
+                <img style="width: 45px;
+                height: 35px;;" src="images/visa.jpg">
+                </div>
+                <div>
+                <input type="radio" name="transc">
+                <img style="width: 75px;
+                height: 62px;" src="images/paypal.png">
+                </div>
+                <div>
+                <input type="radio" name="transc">
+                <img style="width: 55px;
+                height: 45px;" src="images/wise.jpg">
+                </div>
+                <div><br>
+                    <label>Credit Number:</label>
+                    <input type="tel" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="19">
+                </div>
+                <div><br>
+                    <label style="padding: 10px;">Pin Number:</label>
+                    <input type="number" min="1" max="999" required>
+                </div>
+                <div><br>
+                <center>
+                    <button type="submit">Confirm Reservation</button>
+                    <button type="reset">Reset</button>
+                </center>
+                </div>
+            </div>
+            </form>
+        </div>
+        <script>
+            var hotel = sessionStorage.getItem("hotel");
+            if(hotel == "sheraton"){
+                var sorc = "sheraton.png";
+            }
+            else if(hotel == "four-seasons"){
+                var sorc = "four-seasons.png";
+            }
+            else if(hotel == "hilton"){
+                var sorc = "hiton.jpg";
+            }
+            else if(hotel == "marriot"){
+                var sorc = "marriot.png"
+            }
+            document.getElementsByClassName("Bal7a").src = sorc;
+        </script>
+    </body>
+</html>

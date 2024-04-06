@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>
+            Welcome to Trivago!
+        </title>
+        <style>
+            form{
+                width: 22.5%;
+                padding: 60px;
+                border-radius: 15px;
+                background-color: #ddd;
+                box-shadow: 0 2px 3px black;
+                position: absolute;
+                left: 37%;
+                top: 20%;
+            }
+        </style>
+    </head>
+    <body bgcolor="white">
+        <div>
+            <a href="page1.html">
+                <img src="images/trivago.png" style="float: left; height: 88px; width: 200px;">
+            </a>
+        </div>
+        <div class="form">
+            <form method="GET" action="page1-logged.html" onsubmit="return validatePass() && getUsername()">
+                <div><br>
+                    <label style="padding: 33px;">Username: </label>
+                    <input type="text" id="username" required>
+                </div>
+                <div><br>
+                    <label style="padding: 35px;">Password:</label>
+                    <input type="password" id="pass" required>
+                </div>
+                <div><br>
+                    <label>Re-enter Password:</label>
+                    <input type="password" id="confirmpass" required>
+                </div>
+                <br><br>
+                <div id="error" style="color: red;"></div>
+                <br>
+                <div>
+                    <center>
+                    <br>
+                    <button type="submit">Enter</button>
+                    <button type="reset">Reset</button>
+                    </center>
+                </div>
+            </form>
+        </div>
+        <script>
+            function getUsername(){
+                var username = document.getElementById("username").value;
+                sessionStorage.setItem("username", username);
+                return true;
+            }
+
+            function validatePass(){
+                var password = document.getElementById("pass").value;
+                var confirmpass = document.getElementById("confirmpass").value;
+
+                if(password != confirmpass){
+                    document.getElementById("error").textContent = "Two Passwords should be matching!"
+                    return false;
+                }
+                else{
+                    document.getElementById("error").textContent ="";
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

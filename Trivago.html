@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>
+            Trivago
+        </title>
+        <style>
+            img{
+                width: 200px;
+                height: 200px;
+            }
+
+            .ribbon {
+                width: 100px;
+                font-size: 14px;
+                padding: 4px;
+                position: absolute;
+                right: -25px;
+                top: -12px;
+                text-align: center;
+                border-radius: 25px;
+                transform: rotate(20deg);
+                background-color: #ff9800;
+                color: white;
+            }
+
+            .box {
+                width: 200px;
+                height: 200px;
+                background-color: #ffff;
+                position: relative;
+                box-shadow: 0 3px 3px black;
+                border-radius: 30px;
+            }
+
+            .text{
+                font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+                font-weight: 500;
+                background-color: transparent;
+            }
+
+            .bar ul {
+            list-style-type: none;
+            margin: auto;
+            padding: 25;
+            text-align: center;
+            overflow: hidden;
+            }
+
+            .bar ul li {
+                float: left;
+                height: 100%;
+                width: 70px;
+                margin: 10px;
+                border: hidden;
+            }
+
+            .bar ul li a {
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .bar{
+                width: 100%;
+                height: 88px;
+                display: inline-block;
+                vertical-align: top;
+                box-shadow: 0 2px 2px black;
+                border-radius: 20px;
+            }
+            .bar img{
+                float: left;
+                height: 100%;
+            }
+            .bg{
+                background-color: white;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body background="images/hotel.jpeg">
+    <div class="text bar bg">
+        <div>
+        <a href="page1.html">
+        <img src="images/trivago.png">
+        </a>
+        </div>
+        <div>
+            <ul style="float: right;">
+                <li><a href="page1.html">Home</a></li>
+                <li><a href="register.html">Book</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+        <div class="text">
+            <h1 style="font-weight: Bolder">
+                <i>Check out our best deals</i>
+            </h1>
+        </div>
+        <center>
+        <div class="bg" style="box-shadow: 0px 0px 5px black;">
+        <table cellspacing="1" cellpadding="100">
+            <tr>
+                <td>
+                    <div class="box">
+                    <img src="images/marriot.png">
+                    <span class="ribbon">50% off on suites</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="box">
+                    <img src="images/four-seasons.png">
+                    </div>
+                </td>
+                <td>
+                    <div class="box">
+                    <img src="images/sheraton.png">
+                    </div>
+                </td>
+            </tr>
+            </table>
+            <table>
+            <tr>
+                <center>
+                <td>
+                    <div class="box">
+                    <img src="images/hiton.jpg">
+                    <span class="ribbon">40% off on luxury rooms</span>
+                    </div>
+                </td>
+                </center>
+            </tr>
+        </table>
+        </div>
+    </center>
+    </body>
+</html>
