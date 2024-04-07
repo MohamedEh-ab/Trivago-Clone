@@ -25,15 +25,16 @@
         <div class="form">
             <form method="GET" action="page1-logged.html" onsubmit="return validatePass() && getUsername()">
                 <div><br>
-                    <label style="padding: 33px;">Username: </label>
+                    <!--The HTML for attribute [for="username"] specifies the id of the input to be clickable by the label -->
+                    <label for="username" style="padding: 0px 35px;">Username: </label>
                     <input type="text" id="username" required>
                 </div>
                 <div><br>
-                    <label style="padding: 35px;">Password:</label>
+                    <label for="pass" style="padding: 0px 35px;">Password:</label>
                     <input type="password" id="pass" required>
                 </div>
                 <div><br>
-                    <label>Re-enter Password:</label>
+                    <label for="confirmpass">Re-enter Password:</label>
                     <input type="password" id="confirmpass" required>
                 </div>
                 <br><br>
