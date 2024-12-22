@@ -68,7 +68,7 @@
     <body>
         <!-- Form body-->
         <div class="form"> <!-- applies css adjustment to form-->
-            <form action="sub-reserve.html" onsubmit="return getHotel()">
+            <form action="sub-reserve.html">
                 <div>
                     <center>
                         <h1 style="
@@ -452,42 +452,6 @@
                 </div>
             </form>
         </div>
-        <script>
-            function setDiscount() {
-                var hotel = document.getElementById("hotel").value;
-                var room = document.getElementById("acc").value;
-                var discount_box = document.getElementById("discount");
-
-                if (hotel === "marriot" && room === "suite") {
-                    discount_box.value = "50-discount-christmas-2023";
-                }
-                else if (hotel === "hilton" && room === "deluxe") {
-                    discount_box.value = "40-discount-christmas-2023";
-                }
-                else {
-                    discount_box.value = "";
-                }
-            }
-
-            document.getElementById('hotel').addEventListener('change', setDiscount);
-            document.getElementById('acc').addEventListener('change', setDiscount);
-
-            function getHotel() {
-                var hotel = document.getElementById("hotel").value;
-                if (hotel == "sheraton") {
-                    sessionStorage.setItem("hotel", hotel);
-                }
-                if (hotel == "four-seasons") {
-                    sessionStorage.setItem("hotel", hotel);
-                }
-                if (hotel == "marriot") {
-                    sessionStorage.setItem("hotel", hotel);
-                }
-                if (hotel == "hilton") {
-                    sessionStorage.setItem("hotel", hotel);
-                }
-            }
-        </script>
     </body>
 
 </html>
